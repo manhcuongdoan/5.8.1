@@ -1,0 +1,19 @@
+<form class="form-horizontal" autocomplete="off" #f="ngForm" (ngSubmit)="save(f)" novalidate>
+    <abp-modal-header [title]="'EditNewTask' | localize" (onCloseClick)="bsModalRef.hide()"></abp-modal-header>
+    <div class="modal-body">
+        <div class="form-group">
+            <label for="assignedPersonId">Assigned Person: </label>
+            <select class="form-control" name="assignedPersonId" ngModel #assignedPersonId="ngModel">
+              <option value="1">Cuong</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="state">State</label>
+            <select class="form-control" name="state" ngModel #state="ngModel">
+                <option value="1">Active</option>
+                <option value="2">Completed</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
